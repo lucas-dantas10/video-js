@@ -6,7 +6,6 @@ const switchBtn = document.querySelector(".switch-btn");
 
 window.addEventListener("DOMContentLoaded", function() {
     hidePreloader();
-    console.log(switchBtn.classList);
 })
 
 switchBtn.addEventListener("click", function() {
