@@ -1,17 +1,22 @@
-//select preloader
-const preloader = document.querySelector(".preloader");
+const btn = document.querySelector(".switch-btn");
+const video = document.querySelector(".video-container");
 
-//select btn
-const switchBtn = document.querySelector(".switch-btn");
+btn.addEventListener("click", function() {
+    if(!btn.classList.contains("slide")) {
+        btn.classList.add("slide");
+        video.pause();
+    } else {
+        btn.classList.remove("slide");
+        video.play();
+    }
+    
+});
+
+const preloader = document.querySelector(".preloader");
+function hidePreloader() {
+    preloader.classList.add("hide-preloader");
+}
 
 window.addEventListener("DOMContentLoaded", function() {
     hidePreloader();
 })
-
-switchBtn.addEventListener("click", function() {
-    switchBtn.classList.toggle("slide")
-})
-
-function hidePreloader() {
-    preloader.classList.add("hide-preloader");
-}
